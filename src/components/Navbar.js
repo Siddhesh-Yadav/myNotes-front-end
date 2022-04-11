@@ -16,12 +16,10 @@ const Navbar = () => {
   }, [location])
   
   return (
-    <nav className="navbar navbar-expand-xs navbar-dark bg-dark">
+    <nav className="navbar navbar-dark bg-dark">
     <div className="container-fluid">
       <Link className="navbar-brand" to="/">Navbar</Link>
-      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="/navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span className="navbar-toggler-icon"></span>
-      </button>
+
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
@@ -31,11 +29,11 @@ const Navbar = () => {
           <Link className={`nav-link ${location.pathname==="/about"?"active":""}`} to="/about">About</Link>
         </li>
       </ul>
+      </div>
         {!localStorage.getItem("token")?<form className="d-flex">
           <Link className="btn btn-primary mx-2" to="/signup" role="button">Sign Up</Link>
           <Link className="btn btn-primary mx-2" to="/login" role="button">Login</Link>
         </form>:<Link className="btn btn-primary mx-2" onClick={logout} to="/login" role="button">Logout</Link>}
-      </div>
     </div>
   </nav>
   )
