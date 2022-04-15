@@ -25,6 +25,7 @@ const Login = () => {
         localStorage.setItem('token', json.authtoken);
         history.push("/");
     }
+      
   };
 
   const onChange = (e) => {
@@ -32,6 +33,7 @@ const Login = () => {
   };
   return (
     <div>
+      <h1>My Notes App</h1>
       <form action="" onSubmit={handleSubmit}>
         <div className="mb-3 row my-3">
           <label htmlFor="email" className="col-sm-2 col-form-label">

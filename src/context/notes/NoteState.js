@@ -96,7 +96,6 @@ const NoteState = (props) => {
 
 
 
-
   return (
     <noteContext.Provider
       value={{ notes, setnotes, editNote, deleteNote, addNotes, getNotes }}
